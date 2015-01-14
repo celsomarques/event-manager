@@ -85,30 +85,27 @@
 	<build>
 		<plugins>
 
-			<!-- <plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>appassembler-maven-plugin</artifactId>
-				<version>1.9</version>
+			<!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>appassembler-maven-plugin</artifactId> 
+				<version>1.9</version> <executions> <execution> <phase>package</phase> <goals> 
+				<goal>assemble</goal> </goals> <configuration> <assembleDirectory>target</assembleDirectory> 
+				<generateRepository>false</generateRepository> <extraJvmArguments>-Xmx512m</extraJvmArguments> 
+				<programs> <program> <mainClass>Main</mainClass> <name>webapp</name> </program> 
+				</programs> </configuration> </execution> </executions> </plugin> -->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.4</version>
 				<executions>
 					<execution>
+						<id>copy-dependencies</id>
 						<phase>package</phase>
 						<goals>
-							<goal>assemble</goal>
+							<goal>copy-dependencies</goal>
 						</goals>
-						<configuration>
-							<assembleDirectory>target</assembleDirectory>
-							<generateRepository>false</generateRepository>
-							<extraJvmArguments>-Xmx512m</extraJvmArguments>
-							<programs>
-								<program>
-									<mainClass>Main</mainClass>
-									<name>webapp</name>
-								</program>
-							</programs>
-						</configuration>
 					</execution>
 				</executions>
-			</plugin> -->
+			</plugin>
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
