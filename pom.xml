@@ -85,7 +85,7 @@
 	<build>
 		<plugins>
 
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>appassembler-maven-plugin</artifactId>
 				<version>1.9</version>
@@ -101,14 +101,14 @@
 							<extraJvmArguments>-Xmx512m</extraJvmArguments>
 							<programs>
 								<program>
-									<mainClass>com.embraer.eventmanager.Main</mainClass>
+									<mainClass>Main</mainClass>
 									<name>webapp</name>
 								</program>
 							</programs>
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
