@@ -8,14 +8,16 @@
 		http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.5.xsd
 		http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
 
-
-	<mongo:mongo id="mongo" host="localhost" port="27017" />
-
 	<mongo:repositories base-package="com.embraer.eventmanager" />
 
+	<!-- <bean id="mongoURI" class="com.mongodb.MongoURI">
+      <constructor-arg value="${MONGOLAB_URI}"/>
+    </bean> -->
+
+	<mongo:db-factory id="mongoDbFactory" uri="${MONGOLAB_URI}" />
+
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
-		<constructor-arg ref="mongo" />
-		<constructor-arg value="event-manager" />
+		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
 	</bean>
 
 </beans>
