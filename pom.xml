@@ -101,7 +101,7 @@
 							<extraJvmArguments>-Xmx512m</extraJvmArguments>
 							<programs>
 								<program>
-									<mainClass>Main</mainClass>
+									<mainClass>com.embraer.eventmanager.Main</mainClass>
 									<name>webapp</name>
 								</program>
 							</programs>
