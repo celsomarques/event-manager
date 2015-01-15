@@ -1,1 +1,1 @@
-web:    java $JAVA_OPTS -cp target/classes:target/dependency/* com.embraer.eventmanager.Main
+java -jar target/dependency/webapp-runner.jar target/*.war
