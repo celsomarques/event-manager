@@ -1,8 +1,6 @@
 package com.embraer.eventmanager;
 
 import org.apache.commons.lang3.StringUtils;
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.webapp.WebAppContext;
 
 /**
  * @author Celso Ricardo Marques Pereira - CRMPERE
@@ -19,15 +17,15 @@ public class Main {
 			webPort = "8080";
 		}
 		
-		Server server = new Server(Integer.valueOf(webPort));
-		WebAppContext root = new WebAppContext();
-		root.setContextPath("/");
-		root.setDescriptor(webappDirLocation + "/WEB-INF/web.xml");
-		root.setResourceBase(webappDirLocation);
-		root.setParentLoaderPriority(true);
-		
-		server.setHandler(root);
-		server.start();
-		server.join();
+//		Server server = new Server(Integer.valueOf(webPort));
+//		WebAppContext root = new WebAppContext();
+//		root.setContextPath("/");
+//		root.setDescriptor(webappDirLocation + "/WEB-INF/web.xml");
+//		root.setResourceBase(webappDirLocation);
+//		root.setParentLoaderPriority(true);
+//		
+//		server.setHandler(root);
+//		server.start();
+//		server.join();
 	}
 }
