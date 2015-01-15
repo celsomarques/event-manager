@@ -126,8 +126,9 @@
 					<weaveDirectories>
 						<weaveDirectory>${project.build.directory}/classes</weaveDirectory>
 					</weaveDirectories>
-					<source>${maven.compiler.source}</source>
-					<target>${maven.compiler.target}</target>
+					<complianceLevel>1.8</complianceLevel>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 		</plugins>
