@@ -14,6 +14,7 @@
 
 		<spring.framework.version>4.0.7.RELEASE</spring.framework.version>
 		<jackson.version>2.1.0</jackson.version>
+		<webapp-runner.version>7.0.57.1</webapp-runner.version>
 
 	</properties>
 
@@ -85,7 +86,7 @@
 		<dependency>
 			<groupId>com.github.jsimone</groupId>
 			<artifactId>webapp-runner</artifactId>
-			<version>7.0.34.0</version>
+			<version>${webapp-runner.version}</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -160,7 +161,7 @@
 								<artifactItem>
 									<groupId>com.github.jsimone</groupId>
 									<artifactId>webapp-runner</artifactId>
-									<version>7.0.34.0</version>
+									<version>${webapp-runner.version}</version>
 									<destFileName>webapp-runner.jar</destFileName>
 								</artifactItem>
 							</artifactItems>
