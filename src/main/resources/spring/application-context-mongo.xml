@@ -10,12 +10,9 @@
 
 	<mongo:repositories base-package="com.embraer.eventmanager" />
 
-	<!-- <bean id="mongoURI" class="com.mongodb.MongoURI">
-      <constructor-arg value="${MONGOLAB_URI}"/>
-    </bean> -->
-
-	<mongo:db-factory id="mongoDbFactory" host="ds031671.mongolab.com" port="31671" dbname="heroku_app33236134" username="heroku_app33236134" password="c0dt8mou82ddvv9lsjijprj7a0" />
-	<!-- <mongo:db-factory id="mongoDbFactory" uri="${MONGOLAB_URI}" /> -->
+	<mongo:db-factory id="mongoDbFactory" host="ds031601.mongolab.com"
+		port="31601" dbname="heroku_app33258570" username="heroku_app33258570"
+		password="3j1q0g9rjepesj20lb1bjhjunc" />
 
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
 		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
