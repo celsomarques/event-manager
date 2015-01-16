@@ -8,14 +8,26 @@
 		http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.5.xsd
 		http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
 
-	<mongo:repositories base-package="com.embraer.eventmanager" />
-
-	<mongo:db-factory id="mongoDbFactory" host="ds031751.mongolab.com"
-		port="31751" dbname="heroku_app33263416" username="heroku_app33263416"
-		password="rugs8iip9211uoqgt1m07rs9q3" />
-
-	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
-		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
-	</bean>
+	<beans profile="default">
+		<mongo:repositories base-package="com.embraer.eventmanager" />
+	
+		<mongo:db-factory id="mongoDbFactory" host="localhost" port="27017" />
+	
+		<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+			<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
+		</bean>
+	</beans>
+	
+	<beans profile="heroku-dev">
+		<mongo:repositories base-package="com.embraer.eventmanager" />
+	
+		<mongo:db-factory id="mongoDbFactory" host="ds031751.mongolab.com"
+			port="31751" dbname="heroku_app33263416" username="heroku_app33263416"
+			password="rugs8iip9211uoqgt1m07rs9q3" />
+	
+		<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+			<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
+		</bean>
+	</beans>
 
 </beans>

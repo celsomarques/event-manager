@@ -70,11 +70,6 @@
 			<version>4.12</version>
 		</dependency>
 
-		<!-- <dependency> <groupId>org.eclipse.jetty</groupId> <artifactId>jetty-server</artifactId> 
-			<version>9.2.6.v20141205</version> </dependency> <dependency> <groupId>org.eclipse.jetty</groupId> 
-			<artifactId>jetty-webapp</artifactId> <version>9.2.6.v20141205</version> 
-			</dependency> -->
-
 		<dependency>
 			<groupId>com.github.jsimone</groupId>
 			<artifactId>webapp-runner</artifactId>
@@ -100,31 +95,6 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>aspectj-maven-plugin</artifactId>
-				<version>1.7</version>
-				<executions>
-					<execution>
-						<phase>process-classes</phase>
-						<goals>
-							<goal>compile</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<showWeaveInfo />
-					<forceAjcCompile>true</forceAjcCompile>
-					<sources />
-					<weaveDirectories>
-						<weaveDirectory>${project.build.directory}/classes</weaveDirectory>
-					</weaveDirectories>
-					<complianceLevel>${maven.compiler.complianceLevel}</complianceLevel>
-					<source>${maven.compiler.source}</source>
-					<target>${maven.compiler.target}</target>
-				</configuration>
 			</plugin>
 
 			<plugin>
