@@ -21,9 +21,7 @@
 	<beans profile="heroku-dev">
 		<mongo:repositories base-package="com.embraer.eventmanager" />
 	
-		<mongo:db-factory id="mongoDbFactory" host="ds031751.mongolab.com"
-			port="31751" dbname="heroku_app33263416" username="heroku_app33263416"
-			password="rugs8iip9211uoqgt1m07rs9q3" />
+		<mongo:db-factory id="mongoDbFactory" uri="${MONGOLAB_URI}" />
 	
 		<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
 			<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
