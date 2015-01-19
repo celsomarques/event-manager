@@ -21,7 +21,10 @@
 	<beans profile="heroku-dev">
 		<mongo:repositories base-package="com.embraer.eventmanager" />
 	
-		<mongo:db-factory id="mongoDbFactory" uri="${MONGOLAB_URI}" />
+		<bean id="mongoURI" class="com.mongodb.MongoURI">
+			<constructor-arg value="${MONGOLAB_URI}" />
+		</bean>
+		<mongo:db-factory id="mongoDbFactory" uri="#{@mogoURI.}" />
 	
 		<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
 			<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
